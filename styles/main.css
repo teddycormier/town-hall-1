@@ -13,8 +13,8 @@ head img {
 }
 
 header img {
-	padding-right: 30px;
-	padding-left: 30px;
+	padding-right: 3.1%;
+	padding-left: 3.1%;
 }
 
 header {
@@ -38,8 +38,8 @@ header em {
 }
 
 main {
-	padding-right: 30px;
-	padding-left: 30px;
+	padding-right: 3.1%;
+	padding-left: 3.1%;
 }
 
 main h1{
@@ -91,8 +91,8 @@ a:hover {
 body {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 100%;
-	width: 100%;
-	max-width: 850px;
+	width: 98%;
+	max-width: 960px;
 	margin: 0 auto;
 	border: 3px solid #931420;
 	background-color: #fffded;
@@ -114,7 +114,7 @@ footer {
 	border: 3px solid #931420;
 	background-color: #931420;
 	color: white;
-	padding: 25px;
+	padding: 2.6%;
 	font-variant: small-caps;
 	font-weight: bold;
 	font-size: 60%;
@@ -128,13 +128,13 @@ aside a:hover {
 .homesection {
     width: 68%;
     float: right;
-    padding-right: 15px;
-	padding-left: 15px;
+    padding-right: 1.56%;
+	padding-left: 1.56%;
 }
 
 .sidebar {
     width: 20%;
-    padding-right: 20px;
+    padding-right: 2.08%;
 	text-align: center;
 }
 
@@ -161,9 +161,11 @@ article {
 article img {
 	float: right;
 	padding-top: 15px;
-	padding-left: 15px;
-	padding-right: 2px;
+	padding-left: 1.56%;
+	padding-right: .21%;
 	padding-bottom: 15px;
+	max-width: 40%;
+	min-width: 150px;
 }
 
 article h2 {
@@ -175,6 +177,44 @@ article h3 {
 	padding-bottom: .25em;
 }
 
+/* new menu */
+  .topnav {
+	overflow: hidden;
+	background-color: maroon;
+	position: relative;
+  }
+  
+  .topnav #myLinks {
+	display: none;
+  }
+  
+  .topnav a {
+	color: white;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+	display: block;
+  }
+  
+  .topnav a.icon {
+	background: black;
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 0;
+  }
+  
+  .topnav a:hover {
+	background-color: lightgrey;
+	opacity: 75%;
+	color: black;
+	font-weight: bold;
+  }
+  
+  .active {
+	background-color: #4CAF50;
+	color: white;
+  }
 
 /* nav menu */
 #nav_menu {
@@ -198,7 +238,7 @@ article h3 {
 
 #nav_menu ul li a {
 	display: block;
-	width: 170px;
+	width: 165.02px;
 	text-align: center;
 	padding-top: 1em;
 	padding-bottom: 1em;
@@ -232,6 +272,7 @@ article h3 {
 
 .dropdown-content a:hover {
 	background-color: #ddd;
+	font-style: italic;
 }
 
 .dropdown:hover .dropdown-content {
@@ -240,13 +281,183 @@ article h3 {
 
 .dropdown {
 	display: block;
-	width: 170px;
-	text-align: center;
-	padding-top: 1em;
-	padding-bottom: 1em;
+	padding-bottom: 3px;
 	text-decoration: none;
 	background-color: #800000;
 	color: white;
-	font-weight: bold;
-	float: right;
+	float: left;
+	width: 100%;
+}
+
+#mobile_menu { 
+	display: none; 
+	background-color: maroon;
+}
+
+
+/* display the mobile menu #mobile_menu { display: block; }	 */
+
+@media only screen 
+  and (max-device-width: 959px) 
+  and (orientation: portrait) {
+
+	section h1 {
+        font-size: 135%;
+    }
+
+    section h2 {
+        font-size: 120%;
+	}
+	
+	aside h2 {
+        font-size: 120%;
+    }
+
+    #nav_menu {
+        display: none !important;
+	}
+
+	#mobilemenu {
+		display: none;
+	}
+}
+
+
+@media only screen 
+	and (max-width: 767px)
+	and (orientation: landscape) {
+
+		header img {
+			float: none;
+			padding-left: 45%;
+			align-content: center;
+		}
+
+		.homesection {
+			float: none;
+			width: 100%;
+		}
+
+		aside {
+			float: none;
+			padding-left: 38%;
+			width: 100%;
+		}
+
+		header h2 {
+			font-size: 130%;
+			padding-left: 30%;
+			align-content: center;
+		}
+
+		header h3 {
+			padding-left: 33%;
+			align-content: center;
+		}
+
+		main img {
+			max-width: 30%;
+		}
+
+		article img {
+			padding-top: 0px;
+		}
+
+		#nav_menu {
+			display: none;
+		}
+
+		#mobile_menu {
+			display: block;
+		}
+}
+
+@media only screen 
+	and (max-width: 611px)
+	and (orientation: portrait) {
+
+		header {
+			font-size: 100%;
+		}
+
+		body {
+			font-size: 100%;
+		}
+
+		footer {
+			font-size: 100%;
+		}
+
+		header h3 {
+			padding-left: 28%;
+			align-content: center;
+		}
+
+		header h2 {
+			font-size: 130%;
+			padding-left: 24%;
+			align-content: center;
+		}
+
+		header img {
+			float: none;
+			padding-left: 42%;
+			align-content: center;
+		}
+
+		.homesection {
+			float: none;
+			width: 100%;
+		}
+
+		aside {
+			float: none;
+			padding-left: 38%;
+			width: 100%;
+		}
+}
+
+@media only screen 
+	and (max-width: 479px)
+	and (orientation: portrait) {
+
+		header {
+			font-size: 90%;
+		}
+
+		body {
+			font-size: 90%;
+		}
+
+		footer {
+			font-size: 90%;
+		}
+
+		header h3 {
+			padding-left: 26%;
+			align-content: center;
+		}
+
+		header h2 {
+			font-size: 130%;
+			padding-left: 22%;
+			align-content: center;
+		}
+
+		header img {
+			float: none;
+			padding-left: 40%;
+			align-content: center;
+		}
+
+		.homesection {
+			float: none;
+			width: 100%;
+		}
+
+		aside {
+			float: none;
+			padding-left: 38%;
+			width: 100%;
+		}
 }
